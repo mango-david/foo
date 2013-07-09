@@ -1,0 +1,212 @@
+@import "compass";
+@import "variables.scss";
+
+/*
+Goldilocks Approach to Responsive Web Design Boilerplate
+
+Author: Design by Front - @designbyfront
+Version: 0.1
+URL: http://www.goldilocksapproach.com
+----------------------------------------------------------------------------------------
+
+CONTENTS - GLOBAL.CSS
+-----------------------------------------
+1. RESET
+2. ROOT
+3. CORE TYPOGRAPHY
+4. LINKS
+5. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
+6. CUSTOM LAYOUT & TYPOGRAPHY (Baby bear)
+7. CUSTOM LAYOUT & TYPOGRAPHY (Mummy bear)
+8. CUSTOM LAYOUT & TYPOGRAPHY (Daddy bear)
+9. BROWSER AND NON-SEMANTIC STYLING
+
+*/
+
+/* 1. RESET
+----------------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size:100%;
+  font: inherit;
+  vertical-align: baseline;
+  }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+  }
+
+*{
+  @include box-sizing(border-box);
+}
+
+/* 2. ROOT
+----------------------------------------------------------------------------------------*/
+html { 
+  overflow-y: scroll;
+  background: #FFF;
+  }
+
+/* /ht Ethan Marcotte - http://front.ie/l8rJaA */
+img, embed, object, video { max-width: 100%; }
+.ie6 img.full, .ie6 object.full, .ie6 embed, .ie6 video { width: 100%; }
+
+
+/* 3. CORE TYPOGRAPHY
+----------------------------------------------------------------------------------------*/
+
+html, body {
+  font-family: 'helvetica neue', 'helvetica', 'pt sans', 'arial', sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: #333;
+  }
+
+h1 {
+  font-size: 3 * $font-size;
+  line-height: 1em * 2 / 3 * $ratio;
+  margin-bottom: 1em / 3 * $ratio;
+}
+
+h2 {
+  font-size: 2.25 * $font-size;
+  line-height: 1em * 2 / 2.25 * $ratio;
+  margin-bottom: 1em / 2.25 * $ratio;
+}
+
+h3 {
+  font-size: 1.5 * $font-size;
+  line-height: 1em / $ratio * $ratio;
+  margin-bottom: 1em / 1.5 * $ratio;
+}
+
+h4 {
+  font-size: 1.3125 * $font-size;
+  line-height: 1em / 1.3125 * $ratio;
+  margin-bottom: 1em / 1.3125 * $ratio;
+}
+
+h5 {
+  font-size: 1.125 * $font-size;
+  line-height: 1em / 1.125 * $ratio;
+  margin-bottom: 1em / 1.125 * $ratio;
+}
+
+h6 {
+  font-size: 1 * $font-size;
+  line-height: 1em / 1 * $ratio;
+  margin-bottom: 1em / 1 * $ratio;
+}
+
+p, ul, ol, dl, blockquote, label, a {
+  font-size: 1 * $font-size;
+  line-height: 1em/ 1 * $ratio;
+  margin-bottom: 1em / 1 * $ratio;
+  font-weight: 300;
+}
+    
+    
+ul { list-style-type: disc; margin-left: 1.618em; }
+ol { list-style-type: decimal; margin-left: 1.618em; }
+nav ul, nav ol { list-style: none; margin: 0; padding: 0;}
+
+b, strong { font-weight: bold; }
+i, em { font-style: italic; }
+small { font-size: 80%; }
+
+
+/* 4. LINKS
+----------------------------------------------------------------------------------------*/
+a, a:visited { outline: none; color: #439BBD; text-decoration: underline; }  
+a:hover { outline: none; text-decoration:none; }  
+a:active, a:focus { outline: none; }
+
+
+/* 5. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
+----------------------------------------------------------------------------------------*/
+
+* {
+  @include box-sizing(border-box);
+}
+
+/* 6. CUSTOM LAYOUT & TYPOGRAPHY (Baby bear)
+----------------------------------------------------------------------------------------*/
+
+
+
+/* 9. CUSTOM LAYOUT & TYPOGRAPHY (Mama bear)
+----------------------------------------------------------------------------------------*/
+@media screen and (min-width: 30em) {
+
+	.grid {
+	  overflow: hidden;
+	  margin-left: -$pad;
+	}
+	
+	[class*='col-'] {
+	  float: left;
+	  padding-left: $pad;
+	}
+	
+	.col-2-3 {
+	  width: 66.66%;
+	}
+	
+	.col-1-3 {
+	  width: 33.33%;
+	}
+	
+	.col-1-2 {
+	  width: 50%;
+	}
+	
+	.col-1-4 {
+	  width: 25%;
+	}
+	
+	.col-1-8 {
+	  width: 12.5%;
+	}
+	
+	.col-3-4{
+		width: 75%;
+	}
+	
+	/* Opt-in outside padding */
+	.grid-pad {
+	  padding: $pad 0 $pad $pad;
+	  [class*='col-']:last-of-type {
+	    padding-right: $pad;
+	  }
+	}
+	
+}
+
+/* 8. CUSTOM LAYOUT & TYPOGRAPHY (Papa bear)
+----------------------------------------------------------------------------------------*/
+@media screen and (min-width: 63.236em) {
+
+	
+
+}
+
+/* 7. BROWSER AND NON-SEMANTIC STYLING
+----------------------------------------------------------------------------------------*/
+.clearfix:before, .clearfix:after { content: ""; display: block; }
+.clearfix:after { clear: both; }
+.ie6 .clearfix { zoom: 1 }
+
